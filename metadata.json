@@ -1,0 +1,6 @@
+{
+  "name": "Kidrill Group | Global Resources & Trusted Trade",
+  "description": "International trading and resources group connecting mineral commodities, metals, agricultural products, and seafood across Southeast Asia and global markets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

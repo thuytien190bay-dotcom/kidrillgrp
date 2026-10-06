@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-cinzel: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-kr: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+html, body {
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: #0f172a;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.011em;
+}
+
+/* Force all headings (H1-H6), titles, and brand text to crisp modern geometric Sans-serif */
+h1, h2, h3, h4, h5, h6,
+.font-serif-title,
+.font-serif,
+.font-brand {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  letter-spacing: -0.025em;
+}
+
+.font-serif-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+.font-brand {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+}
+
+.font-kr-text {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Subtle hairline grid and shimmer utilities */
+.hairline-border {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.hairline-border-dark {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ========================================================
+   CINEMATIC KEN BURNS KEYFRAMES & UTILITIES
+   ======================================================== */
+@keyframes kenburns-1 {
+  0% {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.15) translate3d(-1.5%, -1%, 0);
+  }
+}
+
+@keyframes kenburns-2 {
+  0% {
+    transform: scale(1.14) translate3d(1%, 0.8%, 0);
+  }
+  100% {
+    transform: scale(1.02) translate3d(-1%, -0.8%, 0);
+  }
+}
+
+@keyframes kenburns-3 {
+  0% {
+    transform: scale(1.04) translate3d(-1%, 1%, 0);
+  }
+  100% {
+    transform: scale(1.16) translate3d(1.2%, -1%, 0);
+  }
+}
+
+.animate-kenburns-1 {
+  animation: kenburns-1 16s cubic-bezier(0.2, 0.8, 0.2, 1) infinite alternate;
+  will-change: transform;
+}
+
+.animate-kenburns-2 {
+  animation: kenburns-2 16s cubic-bezier(0.2, 0.8, 0.2, 1) infinite alternate;
+  will-change: transform;
+}
+
+.animate-kenburns-3 {
+  animation: kenburns-3 16s cubic-bezier(0.2, 0.8, 0.2, 1) infinite alternate;
+  will-change: transform;
+}
+
+@keyframes growWidth {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
