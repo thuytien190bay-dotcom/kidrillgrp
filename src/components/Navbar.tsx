@@ -21,7 +21,6 @@ interface NavbarProps {
   currentPage: NavigationPage;
   onNavigate: (page: NavigationPage) => void;
   language: Language;
-  onToggleLanguage: (lang: Language) => void;
   onOpenInquiry: () => void;
 }
 
@@ -31,7 +30,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   currentPage,
   onNavigate,
   language,
-  onToggleLanguage,
   onOpenInquiry,
 }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -241,37 +239,12 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </nav>
 
-          {/* ZONE 3: Language Switcher & Contact CTA */}
+          {/* ZONE 3: Contact CTA & Navigation Controls */}
           <div className="flex items-center gap-3">
-            {/* Language Switcher EN | 한국어 */}
-            <div className="flex items-center rounded-lg bg-slate-100 border border-slate-200 p-0.5 text-xs font-medium">
-              <button
-                onClick={() => onToggleLanguage('en')}
-                className={`px-2.5 py-1 rounded transition-colors cursor-pointer ${
-                  language === 'en'
-                    ? 'bg-[#b8860b] text-white font-semibold shadow-xs'
-                    : 'text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                EN
-              </button>
-              <span className="text-slate-300 select-none">|</span>
-              <button
-                onClick={() => onToggleLanguage('ko')}
-                className={`px-2.5 py-1 rounded transition-colors cursor-pointer ${
-                  language === 'ko'
-                    ? 'bg-[#b8860b] text-white font-semibold shadow-xs'
-                    : 'text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                한국어
-              </button>
-            </div>
-
             {/* Primary Action Button */}
             <button
               onClick={onOpenInquiry}
-              className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#0f172a] hover:bg-[#1e293b] rounded-lg transition-all shadow-sm whitespace-nowrap cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#0f172a] hover:bg-[#1e293b] rounded-lg transition-all shadow-sm whitespace-nowrap cursor-pointer"
             >
               <span>{t.contact}</span>
               <ArrowUpRight className="w-3.5 h-3.5" />

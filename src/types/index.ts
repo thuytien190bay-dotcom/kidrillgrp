@@ -1,4 +1,4 @@
-export type Language = 'en' | 'ko';
+export type Language = 'en';
 
 export type NavigationPage = 
   | 'home'

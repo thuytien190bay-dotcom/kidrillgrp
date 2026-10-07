@@ -18,7 +18,7 @@ import { NewsPage } from './pages/NewsPage';
 import { ContactPage } from './pages/ContactPage';
 
 export default function App() {
-  const [language, setLanguage] = useState<Language>('en');
+  const language: Language = 'en';
   const [currentPage, setCurrentPage] = useState<NavigationPage>('home');
   const [inquiryModalOpen, setInquiryModalOpen] = useState(false);
   const [selectedProductForInquiry, setSelectedProductForInquiry] = useState<ProductItem | null>(null);
@@ -66,13 +66,12 @@ export default function App() {
   };
 
   return (
-    <div className={`min-h-screen bg-white text-slate-900 flex flex-col justify-between selection:bg-[#b8860b] selection:text-white ${language === 'ko' ? 'font-kr-text' : ''}`}>
+    <div className="min-h-screen bg-white text-slate-900 flex flex-col justify-between selection:bg-[#b8860b] selection:text-white">
       {/* 3-Zone Sticky Top Navigation */}
       <Navbar
         currentPage={currentPage}
         onNavigate={handleNavigate}
         language={language}
-        onToggleLanguage={(lang) => setLanguage(lang)}
         onOpenInquiry={() => handleOpenInquiry()}
       />
 

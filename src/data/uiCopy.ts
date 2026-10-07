@@ -171,7 +171,7 @@ export interface UICopy {
   };
 }
 
-export const copyData: Record<Language, UICopy> = {
+export const copyData: Record<string, UICopy> = {
   en: {
     nav: {
       home: 'Home',
