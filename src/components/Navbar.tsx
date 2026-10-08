@@ -15,6 +15,7 @@ import {
   Mail,
   Phone,
   ArrowRight,
+  HardDrive,
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -240,7 +241,24 @@ export const Navbar: React.FC<NavbarProps> = ({
           </nav>
 
           {/* ZONE 3: Contact CTA & Navigation Controls */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5">
+            {/* Google Drive Portal Button */}
+            <button
+              onClick={() => {
+                onNavigate('drive');
+                setActiveMega(null);
+              }}
+              className={`hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold uppercase tracking-wider rounded-lg transition-all cursor-pointer ${
+                currentPage === 'drive'
+                  ? 'bg-blue-600 text-white shadow-xs'
+                  : 'text-slate-700 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 border border-slate-200/80'
+              }`}
+              title="Google Drive Document Vault"
+            >
+              <HardDrive className={`w-3.5 h-3.5 ${currentPage === 'drive' ? 'text-white' : 'text-blue-600'}`} />
+              <span>Google Drive</span>
+            </button>
+
             {/* Primary Action Button */}
             <button
               onClick={onOpenInquiry}
@@ -435,7 +453,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       Thunder Mark Viet Nam Co., Ltd
                     </h4>
                     <p className="text-xs text-slate-600 leading-relaxed">
-                      Golden King Tower, Ho Chi Minh City. Export trading in agricultural staples, fragrant rice, coffee beans, and cold-chain seafood.
+                      Ho Chi Minh City, Vietnam. Export trading in agricultural staples, fragrant rice, coffee beans, and cold-chain seafood.
                     </p>
                     <span className="text-xs text-[#b8860b] font-semibold inline-flex items-center gap-1 pt-1">
                       {language === 'en' ? 'View Corporate Profile' : '법인 프로필 보기'} →
@@ -867,6 +885,22 @@ export const Navbar: React.FC<NavbarProps> = ({
               }`}
             >
               {t.contact}
+            </button>
+
+            <button
+              onClick={() => {
+                onNavigate('drive');
+                setMobileMenuOpen(false);
+              }}
+              className={`text-left text-lg font-medium py-2 border-b border-slate-100 flex items-center justify-between ${
+                currentPage === 'drive' ? 'text-blue-600 font-semibold' : 'text-slate-800'
+              }`}
+            >
+              <div className="flex items-center gap-2">
+                <HardDrive className="w-5 h-5 text-blue-600" />
+                <span>Google Drive Vault</span>
+              </div>
+              <ArrowRight className="w-4 h-4 text-slate-400" />
             </button>
 
             <div className="pt-4">

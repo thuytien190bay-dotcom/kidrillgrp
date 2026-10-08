@@ -157,11 +157,7 @@ export const CompaniesPage: React.FC<CompaniesPageProps> = ({
               {vnComp.name}
             </h2>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2 text-xs">
-              <div className="flex items-start gap-2.5 text-slate-700">
-                <MapPin className="w-4 h-4 text-[#b8860b] shrink-0 mt-0.5" />
-                <span className="leading-relaxed">{vnComp.address}</span>
-              </div>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs">
               <div className="flex items-center gap-2.5 text-slate-700">
                 <Globe className="w-4 h-4 text-[#b8860b] shrink-0" />
                 <span>Ho Chi Minh City, Vietnam</span>
@@ -219,7 +215,7 @@ export const CompaniesPage: React.FC<CompaniesPageProps> = ({
           </div>
 
           <div className="lg:w-1/2 space-y-4">
-            <VisualAsset type="company_hcmc" aspect="4:3" title="Golding King Tower, Ho Chi Minh City" />
+            <VisualAsset type="company_hcmc" aspect="4:3" title="Thunder Mark Vietnam Corporate Hub · Ho Chi Minh City" />
             <VisualAsset type="agri_rice" aspect="16:9" title="Vietnamese Agricultural Commodities" />
           </div>
         </div>

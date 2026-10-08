@@ -12,7 +12,8 @@ export type NavigationPage =
   | 'markets'
   | 'news'
   | 'sustainability'
-  | 'contact';
+  | 'contact'
+  | 'drive';
 
 export interface CompanyLocation {
   id: string;

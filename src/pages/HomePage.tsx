@@ -320,7 +320,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
       {/* ========================================================
           2. EDITORIAL FEATURE: THE TWO OPERATING SUBSIDIARIES
-             (Large visual spreads with Pakuwon Centre & Golden King)
+             (Large visual spreads with Surabaya & HCMC Hubs)
          ======================================================== */}
       <section id="about" className="py-24 sm:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         <div className="max-w-3xl space-y-4">
@@ -401,7 +401,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               <VisualAsset
                 type="company_hcmc"
                 aspect="16:9"
-                title="Golden King Tower, Ho Chi Minh City · Vietnam"
+                title="Thunder Mark Viet Nam · Ho Chi Minh City, Vietnam"
                 className="w-full h-full object-cover"
               />
               <div className="absolute top-4 left-4">
@@ -421,7 +421,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   Thunder Mark Viet Nam Co., Ltd
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Located at Golden King Tower, District 7, Ho Chi Minh City. Direct export trade connecting Vietnam’s premier agricultural regions and verified seafood packing plants with buyers across South Korea, China, Europe, and the United States.
+                  Headquartered in Ho Chi Minh City, Vietnam. Direct export trade connecting Vietnam’s premier agricultural regions and verified seafood packing plants with buyers across South Korea, China, Europe, and the United States.
                 </p>
                 <div className="pt-2 flex flex-wrap gap-2 text-xs">
                   <span className="px-2.5 py-1 rounded bg-slate-100 text-slate-700 font-medium">Fragrant Rice</span>
@@ -953,11 +953,9 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <h4 className="text-lg font-serif-title font-semibold text-slate-900">
                   Thunder Mark Viet Nam Co., Ltd
                 </h4>
-                <div className="flex items-start gap-2.5 text-xs text-slate-600 leading-relaxed">
-                  <MapPin className="w-4 h-4 text-[#b8860b] shrink-0 mt-0.5" />
-                  <span>
-                    Golden King Tower, Nguyen Luong Bang St., Tan Hung Ward, HCM City, Vietnam
-                  </span>
+                <div className="flex items-center gap-2.5 text-xs text-slate-600">
+                  <Globe className="w-4 h-4 text-[#b8860b] shrink-0" />
+                  <span>Ho Chi Minh City, Vietnam</span>
                 </div>
               </div>
 

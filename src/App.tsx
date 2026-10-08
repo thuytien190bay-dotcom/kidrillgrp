@@ -16,6 +16,7 @@ import { MarketsPage } from './pages/MarketsPage';
 import { SustainabilityPage } from './pages/SustainabilityPage';
 import { NewsPage } from './pages/NewsPage';
 import { ContactPage } from './pages/ContactPage';
+import { GoogleDrivePortal } from './components/GoogleDrivePortal';
 
 export default function App() {
   const language: Language = 'en';
@@ -40,6 +41,7 @@ export default function App() {
         'sustainability',
         'news',
         'contact',
+        'drive',
       ];
       if (validPages.includes(hash)) {
         setCurrentPage(hash);
@@ -159,6 +161,11 @@ export default function App() {
             language={language}
             onNavigate={handleNavigate}
           />
+        )}
+        {currentPage === 'drive' && (
+          <div className="pt-20">
+            <GoogleDrivePortal onClose={() => handleNavigate('home')} />
+          </div>
         )}
       </main>
 

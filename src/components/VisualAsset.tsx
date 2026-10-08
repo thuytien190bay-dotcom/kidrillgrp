@@ -31,7 +31,7 @@ const photoMap: Record<VisualAssetType, { urls: string[]; fallbackAlt: string }>
       'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1200&q=85',
       'https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=1200&q=85',
     ],
-    fallbackAlt: 'Golden King Tower modern corporate commercial office skyscraper in Ho Chi Minh City, Vietnam',
+    fallbackAlt: 'Modern commercial office skyscraper in Ho Chi Minh City, Vietnam',
   },
   company_surabaya: {
     urls: [
@@ -162,7 +162,7 @@ export const VisualAsset: React.FC<VisualAssetProps> = ({
       {/* 2. Specialized Realistic Architectural / Industrial SVG Fallback */}
       {(!imgLoaded || allFailed) && (
         <div className="absolute inset-0 w-full h-full">
-          {/* Detailed Office Tower Architecture for HCMC / Golden King Tower */}
+          {/* Detailed Office Tower Architecture for Corporate Hubs */}
           {(type === 'company_hcmc' || type === 'company_surabaya') ? (
             <svg
               viewBox="0 0 800 450"
@@ -207,7 +207,7 @@ export const VisualAsset: React.FC<VisualAssetProps> = ({
               <polygon points="570,450 570,220 630,220 630,180 670,180 670,450" fill="#93c5fd" fillOpacity="0.4" />
               <polygon points="680,450 680,260 740,260 740,450" fill="#93c5fd" fillOpacity="0.3" />
 
-              {/* Main Landmark Modern Glass Office Tower (Golden King / Pakuwon Centre) */}
+              {/* Main Landmark Modern Glass Office Tower */}
               {/* Left Wing Facet */}
               <polygon points="270,450 270,90 380,40 380,450" fill="url(#towerGlassGrad2)" />
               {/* Center Main Glass Facade */}

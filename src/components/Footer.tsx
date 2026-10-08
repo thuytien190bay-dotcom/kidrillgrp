@@ -145,6 +145,12 @@ export const Footer: React.FC<FooterProps> = ({
                   {nav.contact}
                 </button>
               </li>
+              <li>
+                <button onClick={() => onNavigate('drive')} className="hover:text-[#c5a059] text-slate-300 font-medium transition-colors cursor-pointer flex items-center gap-1.5">
+                  <span>Google Drive Vault</span>
+                  <span className="text-[9px] bg-blue-600/30 text-blue-300 px-1.5 py-0.5 rounded font-mono">Cloud</span>
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -198,9 +204,6 @@ export const Footer: React.FC<FooterProps> = ({
               <span className="font-semibold text-slate-200 block">
                 {companiesData.vn.name}
               </span>
-              <p className="text-[11px] text-slate-400">
-                Golding King Tower, Ho Chi Minh City, Vietnam
-              </p>
             </div>
           </div>
         </div>

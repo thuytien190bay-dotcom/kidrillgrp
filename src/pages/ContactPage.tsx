@@ -3,7 +3,7 @@ import { Language, NavigationPage } from '../types';
 import { copyData } from '../data/uiCopy';
 import { companiesData } from '../data/translations';
 import { KidrillLogo } from '../components/KidrillLogo';
-import { Mail, Phone, MapPin, Building2, ShieldCheck, CheckCircle, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Building2, ShieldCheck, CheckCircle, ArrowRight, Globe } from 'lucide-react';
 
 interface ContactPageProps {
   language: Language;
@@ -136,9 +136,9 @@ export const ContactPage: React.FC<ContactPageProps> = ({
             <h3 className="text-lg font-serif-title font-semibold text-slate-900">
               {companiesData.vn.name}
             </h3>
-            <div className="flex items-start gap-2.5 text-xs text-slate-600 leading-relaxed">
-              <MapPin className="w-4 h-4 text-[#b8860b] shrink-0 mt-0.5" />
-              <span>{companiesData.vn.address}</span>
+            <div className="flex items-center gap-2.5 text-xs text-slate-600">
+              <Globe className="w-4 h-4 text-[#b8860b] shrink-0" />
+              <span>Ho Chi Minh City, Vietnam</span>
             </div>
           </div>
         </div>

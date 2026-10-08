@@ -33,7 +33,7 @@ export const companiesData: Record<'id' | 'vn', CompanyLocation> = {
     legalName: 'Thunder Mark Viet Nam Co., Ltd',
     city: 'Ho Chi Minh City',
     country: 'Vietnam',
-    address: 'Golden King Tower, Nguyen Luong Bang St., Tan Hung Ward, HCM City, Vietnam',
+    address: '',
     businessScope: [
       'International commodity trading',
       'Mineral exports facilitation',
